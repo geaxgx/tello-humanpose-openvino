@@ -1,0 +1,3 @@
+xhost +local:
+PICTURE_DIR=/tmp
+docker run -it  --rm -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix --network host --device /dev/snd  -e PULSE_SERVER=unix:${XDG_RUNTIME_DIR}/pulse/native -v ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native -v ~/.config/pulse/cookie:/root/.config/pulse/cookie --device=/dev/video0:/dev/video0 -v $PICTURE_DIR:/work/pictures --name tello geaxgx/tello_humanpose_openvino:latest

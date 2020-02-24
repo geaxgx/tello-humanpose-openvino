@@ -1,0 +1,10 @@
+name: tello
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - av
+  - pyaml
+  - requests
+  - networkx
+
