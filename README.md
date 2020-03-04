@@ -1,10 +1,13 @@
 # Tello Selfie Assistant with OpenVino
 
+
 Using human pose estimation to pilot a Tello drone and make selfies ! The program gets the video stream from the Tello camera, processes it to make the drone aim the person's face and recognize poses to control the drone (moving forward/backward, right/left, landing, taking a picture,...).
 
 The code of this repository relies on the [Intel&reg; distribution of OpenVINO&trade; toolkit](https://software.intel.com/en-us/openvino-toolkit). OpenVINO (Open Visual Inference and Neural network Optimization) is a free toolkit facilitating the optimization of deep learning models and deployment onto Intel hardware.  Note that the current release of this repository is intented to be run on a Intel&reg; CPU (deployment on iGPU, Intel® Movidius™ Vision Processing Unit (VPU) could be considered as well in future releases). I have made another release of this project but relying on the original release of Openpose and that needs a powerful GPU to run fast enough. Thanks to OpenVINO, the Tello Selfie Assistant can work on a much broader variety of hardware configuration. 
 
 ## How It Works
+
+[A video demo](https://youtu.be/YLAZw0OFFh4) (the video was made using the original Openpose model on a Nvidia GTX 1080Ti, there are some small differences in the keypoints detected with the OpenVINO model, but the functional principle is exactly the same).
 
 The Ryze Tello from DJI is toy quadcopter that can take 5MP images or shoot 720p videos with its frontal camera.
 <img src="img/tello2.png" alt="Tello drone"  title="Tello drone" />
